@@ -40,8 +40,27 @@ app:
 # 详细时间线图请查看 config/timeline.yaml
 # ===============================================================
 schedule:
-  enabled: false                        # 是否启用调度系统（true=启用, false=关闭，默认关闭）
-  preset: "morning_evening"             # 预设模板名称（见上方说明）
+  enabled: True                        # 是否启用调度系统（true=启用, false=关闭，默认关闭）
+  preset: "custom"             # 预设模板名称（见上方说明）
+
+custom:
+  default:
+    collect: true      # 平时只采集数据（积累热点）
+    push: false        # 静默期不推送
+  periods:
+    workday_evening:
+      start: "18:00"   # 18:00 起
+      end: "20:00"     # 20:00 止（留 2h 触发裕量）
+      push: true       # 窗口内推送
+      report_mode: "daily"   # 推送当日全部汇总
+      once:
+        push: true     # 只推一次，不重复
+  day_plans:
+    workday:  { periods: ["workday_evening"] }
+    weekend:  { periods: [] }            # 周末不推
+  week_map:
+    1~5: "workday"     # 周一~周五 → 傍晚推送
+    6~7: "weekend"     # 周六~周日 → 静默
 
 
 # ===============================================================
