@@ -49,8 +49,8 @@ custom:
     push: false        # 静默期不推送
   periods:
     workday_evening:
-      start: "18:00"   # 18:00 起
-      end: "20:00"     # 20:00 止（留 2h 触发裕量）
+      start: "16:00"   # 16:00 起
+      end: "18:00"     # 18:00 止（留 2h 触发裕量）
       push: true       # 窗口内推送
       report_mode: "daily"   # 推送当日全部汇总
       once:
