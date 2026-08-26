@@ -160,6 +160,40 @@ rss:
       name: "雅虎财经"
       url: "https://finance.yahoo.com/news/rssindex"
 
+    - id: "lw-zdjs"
+      name: "荔湾重大建设项目"
+      url: "https://feedity.com/YOUR_FEED_ID.rss"   # <- 替换成你在 feedity.com 生成的 RSS 地址
+      max_age_days: 30                              # 政府栏目更新慢，放宽到30天
+
+    # ═══ 进出口航运 / 贸易 源（已添加） ═══
+    # 【英文源：真实可用，可直接推送】
+    - id: "gcaptain"
+      name: "gCaptain 国际航运"
+      url: "https://gcaptain.com/feed/"
+      max_age_days: 3
+    - id: "splash247"
+      name: "Splash247 航运"
+      url: "https://splash247.com/feed/"
+      max_age_days: 3
+    - id: "seatrade-maritime"
+      name: "Seatrade Maritime 航运"
+      url: "https://www.seatrade-maritime.com/rss.xml"
+      max_age_days: 3
+    - id: "freightwaves"
+      name: "FreightWaves 货运"
+      url: "https://www.freightwaves.com/feed"
+      max_age_days: 3
+    - id: "hellenic-shipping"
+      name: "Hellenic Shipping 航运"
+      url: "https://www.hellenicshippingnews.com/feed/"
+      max_age_days: 3
+
+    # 【中文源：中国航务周刊无公开RSS，需用 feedity.com 生成后替换 url】
+    - id: "csg1993"
+      name: "中国航务周刊"
+      url: "https://feedity.com/YOUR_FEED_ID.rss"   # <- 用 feedity.com 生成 http://www.csg1993.com/ 的RSS后替换
+      max_age_days: 7
+
     # 自定义源示例
     # - id: "custom-feed"
     #   name: "自定义源"
